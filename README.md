@@ -1,4 +1,4 @@
-### express-starter
+# express-starter
 
 This is a skeleton project for the start of a web app written on ExpressJS. It includes connect-assets to manage compilation of CSS and JavaScript, Jade as a templating engine, and CoffeeScript.
 
