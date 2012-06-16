@@ -15,5 +15,8 @@ html
          != js("lib/jquery")
          != js("skin")
 
-   body
+   - var viewDir = locals.root + "/";
+   - var view = locals.filename.replace(viewDir, "").replace(".jade", "");
+   - var viewClass = view.replace(/\//g, "-");
+   body(class=viewClass)
       block body
