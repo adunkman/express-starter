@@ -1,0 +1,19 @@
+doctype 5
+html
+   head
+      link(rel="shortcut icon", href="/favicon.ico")
+
+      title
+         block title
+            | express-starter
+
+      block styles
+         != css("skin")
+         != css("pages/info")
+
+      block scripts
+         != js("lib/jquery")
+         != js("skin")
+
+   body
+      block body

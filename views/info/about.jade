@@ -1,0 +1,53 @@
+extends ../layout
+
+block prepend title
+   | about &bull;
+
+block body
+   h1 About express-starter
+
+   p This is a skeleton project for the start of a web app written on ExpressJS. It includes connect-assets to manage compilation of CSS and JavaScript, Jade as a templating engine, and CoffeeScript.
+
+   h2 Directories and notable files
+
+   ol
+      li express-starter
+         ol
+            li.dir assets
+               p Managed by connect-assets.
+               ol
+                  li.dir css
+                     p Anything that can be compiled to CSS (Stylus, SASS, LESS, etc).
+                     ol
+                        li pages
+                        p Page-specific styles here, using body classes to target specific views (see layout.jade).
+                  li.dir js
+                     p Anything that can be compiled to JavaScript (CoffeeScript, Iced CoffeeScript, etc).
+
+            li.dir config
+               p Application configuration, in JSON format (*.json).
+
+            li.dir controllers
+               p Split your application into managable controllers and place them here. The special controller "host" should ".use" the other controllers where appropriate.
+               ol
+                  li.file host.coffee
+                     p The main ExpressJS server.
+
+            li.dir public
+               p Any additional public assets that aren't managed by connect-assets (images, files, etc).
+
+            li.dir test
+               p Tests, because you test, of course.
+
+            li.dir views
+               p Use folders inside of views which correspond to the controller name from which they are rendered.
+               ol
+                  li layout.jade
+                     p The master layout for the application.
+
+            li.file index.js
+               p The entry point for the server (your command to start the server should be: <code>node index.js</code>).
+
+   h2 About the author
+
+   p You can follow <a href="http://twitter.com/adunkman">@adunkman</a> on Twitter or <a href="https://github.com/adunkman">adunkman</a> on Github.
