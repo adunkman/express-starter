@@ -6,7 +6,7 @@ block prepend title
 block body
    h1 About express-starter
 
-   p This is a skeleton project for the start of a web app written on ExpressJS. It includes connect-assets to manage compilation of CSS and JavaScript, Jade as a templating engine, and CoffeeScript.
+   p This is a skeleton project for the start of a web app written on ExpressJS. It includes connect-assets to manage compilation of CSS and JavaScript and uses Jade as a templating engine.
 
    h2 Directories and notable files
 
@@ -17,24 +17,21 @@ block body
                .description Managed by connect-assets.
                ol
                   li.dir css
-                     .description Anything that can be compiled to CSS (Stylus, SASS, LESS, etc).
+                     .description Anything that can be compiled to CSS (Stylus, SASS, LESS, CSS, etc).
                      ol
                         li pages
-                           .description Page-specific styles here, using body classes to target specific views (see layout.jade).
+                           .description Page-specific styles here, using body classes to target specific views (see views/layout.jade and middleware/bodyClass.js).
                   li.dir js
-                     .description Anything that can be compiled to JavaScript (CoffeeScript, Iced CoffeeScript, etc).
+                     .description Anything that can be compiled to JavaScript (CoffeeScript, Iced CoffeeScript, JavaScript etc).
 
             li.dir config
-               .description Application configuration, in JSON format (*.json).
+               .description Application configuration, preferring environmental variables.
 
             li.dir controllers
-               .description Split your application into managable controllers and place them here. The special controller "host" should ".use" the other controllers where appropriate.
-               ol
-                  li.file host.coffee
-                     .description The main ExpressJS server.
+               .description Split your application into managable controllers and place them here. The server.js should ".use" the other controllers where appropriate.
 
             li.dir public
-               .description Any additional public assets that aren't managed by connect-assets (images, files, etc).
+               .description Any additional public assets that aren't managed by connect-assets (images, files, favicon.ico, etc).
 
             li.dir test
                .description Tests, because you test, of course.
@@ -46,7 +43,7 @@ block body
                      .description The master layout for the application.
 
             li.file index.js
-               .description The entry point for the server (your command to start the server should be: <code>node index.js</code>).
+               .description The entry point for the server (your command to start the server should be: <code>node server</code> or <code>npm start</code>).
 
    h2 About the author
 
