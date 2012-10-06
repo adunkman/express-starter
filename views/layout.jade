@@ -1,8 +1,6 @@
 doctype 5
 html
    head
-      link(rel="shortcut icon", href="/favicon.ico")
-
       title
          block title
             | express-starter
@@ -12,12 +10,9 @@ html
          != css("pages/info")
          link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Overlock")
 
+   body(class=bodyClass)
+      block body
+
       block scripts
          != js("lib/jquery")
          != js("skin")
-
-   - var viewDir = locals.root + "/";
-   - var view = locals.filename.replace(viewDir, "").replace(".jade", "");
-   - var viewClass = view.replace(/\//g, "-");
-   body(class=viewClass)
-      block body
