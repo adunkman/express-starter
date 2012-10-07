@@ -12,9 +12,15 @@
     "connect-assets": "2.3.3",
     "stylus": "0.29.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "1.6.0",
+    "supertest": "0.3.1"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
   }
 }

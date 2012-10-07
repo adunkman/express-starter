@@ -4,7 +4,7 @@ var config = require("./config"),
     jade = require("jade"),
     connectAssets = require("connect-assets");
 
-var app = express(),
+var app = module.exports = express(),
     server = http.createServer(app);
 
 app.configure("development", function () {
@@ -28,6 +28,8 @@ app.use(require("./middleware/bodyClass"));
 // Controllers
 app.use(require("./controllers/info"));
 
-server.listen(config.port, function () {
-   console.log("Express application booted, listening on %s.", config.port);
-});
+if (require.main === module) {
+   server.listen(config.port, function () {
+      console.log("Express application booted, listening on %s.", config.port);
+   });
+}
